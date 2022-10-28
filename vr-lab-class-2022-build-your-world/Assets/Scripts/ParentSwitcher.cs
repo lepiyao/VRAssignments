@@ -26,9 +26,9 @@ public class ParentSwitcher : MonoBehaviour
     void SetParent(int idx)
     {
         // TODO: Exercise 1.4 -> 1.)
-        Debug.Log("Switch");
-        Debug.Log(idx);
-        Debug.Log(parents[idx]);
+        //Debug.Log("Switch");
+        //Debug.Log(idx);
+        //Debug.Log(parents[idx]);
         transform.SetParent(parents[idx], false);
         currentParent++;
         // what is the effect of worldPositionStays?

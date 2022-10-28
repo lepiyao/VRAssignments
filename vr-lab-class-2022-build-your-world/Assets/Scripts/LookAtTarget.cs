@@ -11,12 +11,13 @@ public class LookAtTarget : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log(target);
     }
 
     // Update is called once per frame
     void Update()
     {
         // TODO: Exercise 1.4 -> 2.)
+        
     }
 }

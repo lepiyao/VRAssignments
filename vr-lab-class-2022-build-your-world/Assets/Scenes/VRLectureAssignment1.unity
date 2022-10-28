@@ -6812,7 +6812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2070037282}
-  offset: {x: 0, y: 1.4, z: 0}
+  offset: {x: 0, y: 1.05, z: 0}
 --- !u!114 &1264897425
 MonoBehaviour:
   m_ObjectHideFlags: 0
