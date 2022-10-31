@@ -95,7 +95,7 @@ public class VegetationGenerator : MonoBehaviour
                 col1 = restrictedBounds[j].GetComponent<Collider>();
                 if (col1.bounds.Intersects(col2.bounds))
                 {
-                    Debug.Log("Bounds intersecting");
+                    //Debug.Log("Bounds intersecting");
                     instances[i].transform.Translate(rangeMinMax);
                 }
             }

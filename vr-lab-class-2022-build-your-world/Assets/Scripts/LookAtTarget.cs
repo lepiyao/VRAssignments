@@ -12,10 +12,12 @@ public class LookAtTarget : MonoBehaviour
     void Start()
     {
         //Still need some fixing
-        offset.x = 0.5F;
-        offset.y = 1.5F;
-        offset.z = 0.5F;
-        transform.position = transform.position+offset;
+        /*offset.x = 0F;
+        offset.y = 0F;
+        offset.z = 0F;
+        transform.position = transform.position+offset;*/
+        transform.localPosition = offset;
+        transform.LookAt(target);
     }
 
     // Update is called once per frame
@@ -23,6 +25,6 @@ public class LookAtTarget : MonoBehaviour
     {
         // TODO: Exercise 1.4 -> 2.)
         transform.LookAt(target);
-
+        //transform.rotation *= Quaternion.Euler(-43, 0, 0);
     }
 }
