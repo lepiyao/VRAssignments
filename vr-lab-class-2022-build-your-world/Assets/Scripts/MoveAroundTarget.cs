@@ -52,17 +52,13 @@ public class MoveAroundTarget : MonoBehaviour
         // TODO: Exercise 1.5
         //changing the degree rotation
         degreesPerSecond += degreesPerSecond * Time.deltaTime;
-        
         Vector3 circlePos = new Vector3(Mathf.Cos(degreesPerSecond), 0, Mathf.Sin(degreesPerSecond));
-        Debug.Log("circlePos= " + circlePos);
-
+        
         float timecounter = 0;
         timecounter += Time.deltaTime;
-
         float xa = Mathf.Cos(timecounter);
         float ya = 0;
         float za = Mathf.Sin(timecounter);
-
         transform.position = new Vector3(xa,ya,za);
 
         return transform.position;
@@ -71,7 +67,6 @@ public class MoveAroundTarget : MonoBehaviour
     Quaternion CalculateRotationUpdate(Vector3 newPosition)
     {
         // TODO: Exercise 1.5
-
         return transform.rotation;
     }
 }
