@@ -35,7 +35,7 @@ public class MoveAroundTarget : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.rotation = Quaternion.Euler(0F, 180F, 0F);
     }
 
     // Update is called once per frame
@@ -53,9 +53,9 @@ public class MoveAroundTarget : MonoBehaviour
         //changing the degree rotation
         /*degreesPerSecond += degreesPerSecond * Time.deltaTime;
         
-        float xa = target.position.x + Mathf.Cos(degreesPerSecond);
+        float xa = (target.position.x * Mathf.Cos(degreesPerSecond));
         float ya = 0;
-        float za = target.position.z + Mathf.Sin(degreesPerSecond);
+        float za = (target.position.z * Mathf.Sin(degreesPerSecond));
         Vector3 circlePos = new Vector3(xa,ya,za);
         
         transform.position += circlePos*Time.deltaTime;
@@ -69,6 +69,7 @@ public class MoveAroundTarget : MonoBehaviour
         // TODO: Exercise 1.5
         //Debug.Log("2nd after newPosition = "+newPosition);
         //transform.RotateAround(target.transform.position, Vector3.forward, degreesPerSecond*Time.deltaTime);
+        //transform.rotation = Quaternion.Euler(0F, -90F, 0F);
         return transform.rotation;
     }
 }
