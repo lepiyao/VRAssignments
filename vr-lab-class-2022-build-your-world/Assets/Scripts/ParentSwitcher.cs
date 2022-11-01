@@ -16,7 +16,6 @@ public class ParentSwitcher : MonoBehaviour
     void Start()
     {
         SetParent(0);
-        //offset = new Vector3(0.5f, 2f, 0.5f);
     }
 
     // Update is called once per frame
@@ -27,25 +26,24 @@ public class ParentSwitcher : MonoBehaviour
         if (Input.GetKeyDown(nextParentKey))
         {
             currentParent += 1;
-            /*this.transform.position = transform.position + offset;
-            offset.x = 0;
-            offset.y = 0;
-            offset.z = 0;*/
         }
 
-        if (currentParent == parents.Count)
+        if (currentParent == parents.Count){
             currentParent = 0;
+        }
+        
+        // Rotate the camera to -43 degree so it can see the whole model if the parent = 1
+        if(currentParent == 1){
+            transform.rotation *= Quaternion.Euler(-43, 0, 0);
+        }
+
         SetParent(currentParent);
     }
 
     void SetParent(int idx)
     {
         // TODO: Exercise 1.4 -> 1.)
-        //Debug.Log("Switch");
-        //Debug.Log(idx);
-        //Debug.Log(parents[idx]);
         transform.SetParent(parents[idx], false);
-        //currentParent++;
         // what is the effect of worldPositionStays?
     }
 }
