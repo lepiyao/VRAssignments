@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class VegetationGenerator : MonoBehaviour
 {
+    [SerializeField]
+    public struct Vegetation
+    {
+        public GameObject Prefab;
+        public int numObjects;
+    }
+
+    [SerializeField]
     public List<GameObject> vegetationPrefabs = new List<GameObject>();
 
     private List<GameObject> instances = new List<GameObject>();
@@ -59,11 +67,12 @@ public class VegetationGenerator : MonoBehaviour
             
             //Choose random prefabs using the number of item list in the vegetationPrefabs
             int item = Random.Range(0, vegetationPrefabs.Count);
-
+            
             //Create the gameObj and set the parent to the transform and add to the instances game object list
             GameObject gObj = Instantiate(vegetationPrefabs[item], rangeMinMax, Quaternion.Euler(0, Random.Range(0, 30), 0));
             gObj.transform.SetParent(transform);
             instances.Add(gObj);
+
         }
         
         // Collisions need to be resolved at a later time,

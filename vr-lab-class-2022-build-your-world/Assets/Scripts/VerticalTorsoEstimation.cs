@@ -33,8 +33,9 @@ namespace Vrsys
 
             // Body already stays in Y Axis, but still do a rotation
             //transform.rotation = Quaternion.Euler(headTransform.localRotation.x * transform.localRotation.x, 0F, headTransform.localRotation.z * transform.localRotation.z);
-            transform.rotation =  Quaternion.Euler(headTransform.localRotation.x * transform.localRotation.x, 0F, headTransform.localRotation.z * transform.localRotation.z);
-            //transform.position = new Vector3(headTransform.position.x, headTransform.localPosition.y * transform.localPosition.y, headTransform.position.z);
+            //transform.position += new Vector3(headTransform.parent.localPosition.x * headTransform.localPosition.x * headTransform.position.x, transform.localPosition.y, headTransform.parent.localPosition.z * headTransform.localPosition.z * headTransform.position.z);
+            //transform.rotation *= Quaternion.Euler( headTransform.parent.localRotation.x * headTransform.localRotation.x * transform.localRotation.x, 0F, headTransform.parent.localRotation.z * headTransform.localRotation.z * transform.localRotation.z);
+            //transform.rotation *= Quaternion.Euler(0F, headTransform.parent.localRotation.y * headTransform.localRotation.y * transform.localRotation.y, 0F);
 
             //transform.Rotate(new Vector3(headTransform.rotation.x, 0, headTransform.rotation.z)* Time.deltaTime, Space.World);
         }
