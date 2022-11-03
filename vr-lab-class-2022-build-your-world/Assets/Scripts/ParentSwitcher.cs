@@ -21,8 +21,9 @@ public class ParentSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if(Input.GetKeyDown(nextParentKey))
-            SetParent((currentParent + 1) % parents.Count);*/
+        /*if(Input.GetKeyDown(nextParentKey)){
+            SetParent((currentParent + 1) % parents.Count);
+        }*/
         if (Input.GetKeyDown(nextParentKey))
         {
             currentParent += 1;
@@ -45,5 +46,8 @@ public class ParentSwitcher : MonoBehaviour
         // TODO: Exercise 1.4 -> 1.)
         transform.SetParent(parents[idx], false);
         // what is the effect of worldPositionStays?
+        /*If we set the worldPositionStays as TRUE
+         the object will keep the same position 
+        as the previous Parent*/
     }
 }
