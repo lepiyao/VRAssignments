@@ -60,6 +60,7 @@ public class MoveAroundTarget : MonoBehaviour
         
         transform.position += circlePos*Time.deltaTime;
         Debug.Log("after transform.position= " + transform.position);*/
+        // calculate the linear line or position then multiply it with the degree
         transform.RotateAround(target.transform.position,new Vector3 (0, 1, 0), degreesPerSecond*Time.deltaTime);
 
         return transform.position;

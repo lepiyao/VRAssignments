@@ -21,8 +21,8 @@ namespace Vrsys
 
             // TODO Exercise 1.6
             // Body already stays in Y Axis, but still do a rotation
-            transform.rotation = Quaternion.Euler(0F, headTransform.localRotation.y * transform.localRotation.y, 0F);
-            transform.Rotate(new Vector3(headTransform.position.x, transform.position.y, headTransform.position.z));
+            //transform.Rotate(new Vector3(headTransform.position.x, transform.position.y, headTransform.position.z));
+            transform.rotation = Quaternion.Euler(0F, headTransform.rotation.y * transform.rotation.y, 0F);
             //transform.localPosition = transform.localPosition + new Vector3 (headTransform.localPosition.x, headTransform.localPosition.y * transform.localPosition.y, headTransform.localPosition.z);
         }
     }
