@@ -5,13 +5,6 @@ using UnityEngine;
 public class VegetationGenerator : MonoBehaviour
 {
     [SerializeField]
-    public struct Vegetation
-    {
-        public GameObject Prefab;
-        public int numObjects;
-    }
-
-    [SerializeField]
     public List<GameObject> vegetationPrefabs = new List<GameObject>();
 
     private List<GameObject> instances = new List<GameObject>();
