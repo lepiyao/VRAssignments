@@ -1,9 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
+
 
 public class VegetationGenerator : MonoBehaviour
 {
+    [Serializable]
+    public struct asd
+    {
+        public int i;
+        public GameObject g;
+    }
+
+    public List<asd> listAsd = new List<asd>();
+
     [SerializeField]
     public List<GameObject> vegetationPrefabs = new List<GameObject>();
 
