@@ -60,13 +60,17 @@ public class MoveAroundTarget : MonoBehaviour
         
         transform.position += circlePos*Time.deltaTime;
         Debug.Log("after transform.position= " + transform.position);*/
+        // calculate the linear line or position then multiply it with the degree
         transform.RotateAround(target.transform.position,new Vector3 (0, 1, 0), degreesPerSecond*Time.deltaTime);
+
         return transform.position;
     }
 
     Quaternion CalculateRotationUpdate(Vector3 newPosition)
     {
         // TODO: Exercise 1.5
+        //changing the degree rotation
+        //degreesPerSecond += degreesPerSecond * Time.deltaTime;
         //Debug.Log("2nd after newPosition = "+newPosition);
         //transform.RotateAround(target.transform.position, Vector3.forward, degreesPerSecond*Time.deltaTime);
         //transform.rotation = Quaternion.Euler(0F, -90F, 0F);

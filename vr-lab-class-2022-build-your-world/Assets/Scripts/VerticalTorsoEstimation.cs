@@ -20,24 +20,10 @@ namespace Vrsys
         {
 
             // TODO Exercise 1.6
-            //Debug.Log("headTransform = " + headTransform.rotation);
-            //Debug.Log("headTransform X = " + headTransform.rotation.x);
-            //Debug.Log("headTransform Z= " + headTransform.rotation.z);
-            //Debug.Log("test= " + Quaternion.Euler(headTransform.rotation.x, 0, headTransform.rotation.z));
-
-            //https://answers.unity.com/questions/1595364/how-can-i-move-a-gameobject-along-its-global-axis.html
-            //transform.Rotate(Vector3.up* Time.deltaTime, Space.World);
-            //transform.Translate(Vector3.up* Time.deltaTime, Space.World);
-            //transform.position = new Vector3(headTransform.position.x, 0, headTransform.position.z);
-            //transform.TransformDirection(new Vector3(headTransform.position.x, 0, headTransform.position.z));
-
             // Body already stays in Y Axis, but still do a rotation
-            //transform.rotation = Quaternion.Euler(headTransform.localRotation.x * transform.localRotation.x, 0F, headTransform.localRotation.z * transform.localRotation.z);
-            //transform.position += new Vector3(headTransform.parent.localPosition.x * headTransform.localPosition.x * headTransform.position.x, transform.localPosition.y, headTransform.parent.localPosition.z * headTransform.localPosition.z * headTransform.position.z);
-            //transform.rotation *= Quaternion.Euler( headTransform.parent.localRotation.x * headTransform.localRotation.x * transform.localRotation.x, 0F, headTransform.parent.localRotation.z * headTransform.localRotation.z * transform.localRotation.z);
-            //transform.rotation *= Quaternion.Euler(0F, headTransform.parent.localRotation.y * headTransform.localRotation.y * transform.localRotation.y, 0F);
-
-            //transform.Rotate(new Vector3(headTransform.rotation.x, 0, headTransform.rotation.z)* Time.deltaTime, Space.World);
+            //transform.Rotate(new Vector3(headTransform.position.x, transform.position.y, headTransform.position.z));
+            transform.rotation = Quaternion.Euler(0F, headTransform.rotation.y * transform.rotation.y, 0F);
+            //transform.localPosition = transform.localPosition + new Vector3 (headTransform.localPosition.x, headTransform.localPosition.y * transform.localPosition.y, headTransform.localPosition.z);
         }
     }
 }
