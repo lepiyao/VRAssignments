@@ -100,6 +100,13 @@ public class AvatarBodySelection : MonoBehaviour
         //if (Physics.Raycast(transform.position, fwd, 10))
         //    print("There is something in front of the object!");
 
+        //set the origion position = mirror position
+        //    the direction of the raycast = Vector3.forward
+        //    the layer mask = Mirror
+        //    RaycastHit hit = as the out 
+        //    set max distance as = Mathf.Infinity
+
+
         return false;
     }
 
